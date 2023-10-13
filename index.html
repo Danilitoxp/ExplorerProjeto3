@@ -3,7 +3,7 @@
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="shortcut icon" href="/docs/favicon.png" type="image/x-icon">
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crie seu evento</title>
@@ -19,7 +19,7 @@
       <p>O primeiro passo, é preencher esse
         formulário de inscrição.</p>
     </header>
-    <form>
+    <form id="my-form">
 
       <fieldset>
         <div class="fieldset-wrapper">
@@ -27,7 +27,11 @@
 
           <div class="input-wrapper">
             <label for="event-title">Título do evento <span>(mínimo 8 caracteres)</span></label>
-            <input type="text" id="event-title" />
+            <input 
+              type="text" 
+              id="event-title"
+              required
+              minlength="8" />
           </div>
   
           <div class="input-wrapper">
@@ -68,7 +72,10 @@
 
           <div class="input-wrapper">
             <label for="event-password">Senha de acesso para os participantes <span>(mínimo 8 caracteres)</span></label>
-            <input type="password" id="event-password" />
+            <input 
+              type="password" 
+              id="event-password"
+              minlength="8" />
           </div>
 
           <div class="checkbox-wrapper">
@@ -105,9 +112,14 @@
 
         </div>
       </fieldset>
-
-
     </form>
+    <footer>
+      <button 
+        class="button" 
+        form="my-form">
+        Salvar evento
+      </button>
+    </footer>
   </div>
 </body>
 </html>
